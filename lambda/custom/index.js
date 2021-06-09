@@ -7,12 +7,12 @@ Data: Customize the data below as you please.
 ***********/
 
 
-const SKILL_NAME = "Personality Quiz";
-const HELP_MESSAGE_BEFORE_START = "Answer five questions, and I will tell you what animal you are. Are you ready to play?";
-const HELP_MESSAGE_AFTER_START = "Just respond with yes or no and I'll give you the result in the end.";
-const HELP_REPROMPT = "Your animal will be revealed after you answer all my yes or no questions.";
+const SKILL_NAME = "Pancake Quiz";
+const HELP_MESSAGE_BEFORE_START = "Pancake Quiz can help you discover your pancake mood. I’ll pose 5 questions to you, you’ll consider the answers carefully before answering yes or no. If you don’t respond or are unsure, that’s okay, I’ll decide for you using my intuition. Let's start.";
+const HELP_MESSAGE_AFTER_START = "You’re currently taking the quiz to discover your pancake mood. I’ll ask questions and you’ll say yes or no, and if you’re unsure or don’t know, that’s okay, I can answer for you. Let me know if you need the question repeated. At the end I'll reveal your result.";
+const HELP_REPROMPT = "Once you answer yes or no to all questions, I'll reveal your pancake match.";
 const STOP_MESSAGE = "Your spirit animal will be waiting for you next time.";
-const MISUNDERSTOOD_INSTRUCTIONS_ANSWER = "Please answer with either yes or no.";
+const MISUNDERSTOOD_INSTRUCTIONS_ANSWER = "Sorry, I didn't get that, you need to answer with yes or no.";
 const HINT_TEXT = `To play again, just say "Alexa, open ${SKILL_NAME}"`
 
 
@@ -23,9 +23,9 @@ const BACKGROUND_GOODBYE_IMAGE_URL = "https://s3.amazonaws.com/coach-courses-us/
 const BACKGROUND_HELP_IMAGE_URL = "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/help.jpg";
 // const BACKGROUND_HELP_IMAGE_URL = "help.jpg";
 
-const WELCOME_MESSAGE = "Hi! I can tell you what animal you're most like. All you have to do is answer five questions with either yes or no. Are you ready to start?";
+const WELCOME_MESSAGE = "Welcome! I can help you find out what type of pancake you are that matches your current mood. I’ll ask 5 questions and you’ll answer yes or no. Are you ready to start?";
 const INITIAL_QUESTION_INTROS = [
-  "Great! Let's start!",
+  "Splendid, Let's get started!",
   "<say-as interpret-as='interjection'>Alrighty</say-as>! Here comes your first question!",
   "Ok lets go. <say-as interpret-as='interjection'>Ahem</say-as>.",
   "<say-as interpret-as='interjection'>well well</say-as>."
@@ -43,11 +43,11 @@ const QUESTION_INTROS = [
   "I agree."
 ];
 const UNDECISIVE_RESPONSES = [
-  "<say-as interpret-as='interjection'>Honk</say-as>. I'll just choose for you.",
-  "<say-as interpret-as='interjection'>Nanu Nanu</say-as>. I picked an answer for you.",
-  "<say-as interpret-as='interjection'>Uh oh</say-as>... well nothing I can do about that.",
-  "<say-as interpret-as='interjection'>Aha</say-as>. We will just move on then.",
-  "<say-as interpret-as='interjection'>Aw man</say-as>. How about this question?",
+  "<say-as interpret-as='interjection'>Honk</say-as>. Alright then, I'll choose for you.",
+  "<say-as interpret-as='interjection'>Nanu Nanu</say-as>. It can be difficult answering, I've answered for you.",
+  "<say-as interpret-as='interjection'>Uh oh</say-as> I'll select an option for you then.",
+  "<say-as interpret-as='interjection'>Aha</say-as>. It's not always easy to answer, so I've chosen for you.",
+  "<say-as interpret-as='interjection'>Aw man</say-as>. Let's move onto the next question",
 ];
 const RESULT_MESSAGE = "Here comes the big reveal! You are "; // the name of the result is inserted here.
 const RESULT_MESSAGE_SHORT = "You are "; // the name of the result is inserted here.
@@ -109,7 +109,7 @@ const resultList = {
 const questions = [{
     question: "Do you like spending time socializing with others?",
     questionDisplay: "Do you like spending time socializing?",
-    background:  "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q1.jpg", 
+    background:  "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q1.jpg",
     //background: "question1.jpg",
     points: {
       result1: 4,
@@ -122,7 +122,7 @@ const questions = [{
   {
     question: "Do you enjoy sunbathing?",
     questionDisplay: "Do you enjoy sunbathing?",
-    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q2.jpg", 
+    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q2.jpg",
     //background: "question2.jpg",
     points: {
       result1: 4,
@@ -135,7 +135,7 @@ const questions = [{
   {
     question: "Do you enjoy reading a good book more than going out to a party?",
     questionDisplay: "Do you enjoy a book more than a party?",
-    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q3.jpg", 
+    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q3.jpg",
     //background: "question3.jpg",
     points: {
       result1: 0,
@@ -148,7 +148,7 @@ const questions = [{
   {
     question: "Do you like doing sports?",
     questionDisplay: "Do you like doing sports?",
-    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q4.jpg", 
+    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q4.jpg",
     //background: "question4.jpg",
     points: {
       result1: 2,
@@ -161,7 +161,7 @@ const questions = [{
   {
     question: "Do you prefer vacationing in the forest instead of on the beach?",
     questionDisplay: "A beach vs a forest. Forest? Yes or no?",
-    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q5.jpg", 
+    background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q5.jpg",
     //background: "question5.jpg",
     points: {
       result1: 0,
@@ -261,14 +261,14 @@ const RepeatIntentHandler = {
    },
 handle(handlerInput) {
     // Get the session attributes.
-    const sessionAttributes =   
-    handlerInput.attributesManager.getSessionAttributes(); 
+    const sessionAttributes =
+    handlerInput.attributesManager.getSessionAttributes();
     console.log('Repeat');
     console.log(sessionAttributes.lastPrompt);
-   return 	buildResponse (handlerInput, sessionAttributes.lastPrompt, sessionAttributes.lastReprompt, sessionAttributes.lastTitle, sessionAttributes.lastImage_url,  sessionAttributes.lastDisplayText, sessionAttributes.lastDisplay_type) 
+   return 	buildResponse (handlerInput, sessionAttributes.lastPrompt, sessionAttributes.lastReprompt, sessionAttributes.lastTitle, sessionAttributes.lastImage_url,  sessionAttributes.lastDisplayText, sessionAttributes.lastDisplay_type)
   }
 };
-	
+
 const _randomIndexOfArray = (array) => Math.floor(Math.random() * array.length);
 const _randomOfArray = (array) => array[_randomIndexOfArray(array)];
 const _adder = (a, b) => a + b;
@@ -329,10 +329,10 @@ const quizModeHandler = {
   if (request.type === 'IntentRequest' && request.intent.name === 'AMAZON.RepeatIntent') {
         console.log('Repeat');
     	console.log(sessionAttributes.lastPrompt);
-	   return 	buildResponse (handlerInput, sessionAttributes.lastPrompt, sessionAttributes.lastReprompt, sessionAttributes.lastTitle, sessionAttributes.lastImage_url,  sessionAttributes.lastDisplayText, sessionAttributes.lastDisplay_type) 
+	   return 	buildResponse (handlerInput, sessionAttributes.lastPrompt, sessionAttributes.lastReprompt, sessionAttributes.lastTitle, sessionAttributes.lastImage_url,  sessionAttributes.lastDisplayText, sessionAttributes.lastDisplay_type)
 	}
-    
-  
+
+
   },
 };
 
@@ -354,7 +354,7 @@ const resultModeHandler = {
     const request = handlerInput.requestEnvelope.request;
     const attributesManager = handlerInput.attributesManager;
     const sessionAttributes = attributesManager.getSessionAttributes();
-    
+
     if (request.type === 'IntentRequest' && request.intent.name === 'AMAZON.YesIntent') {
       _initializeApp(sessionAttributes);
       sessionAttributes.state = states.QUIZMODE;
@@ -366,15 +366,15 @@ const resultModeHandler = {
       const sessionAttributes = attributesManager.getSessionAttributes();
       sessionAttributes.state = '';
       return buildResponse(handlerInput, STOP_MESSAGE, '', SKILL_NAME, BACKGROUND_GOODBYE_IMAGE_URL,STOP_MESSAGE);
-    
+
     }
-    
+
   if (request.type === 'IntentRequest' && request.intent.name === 'AMAZON.RepeatIntent') {
         console.log('Repeat');
     	console.log(sessionAttributes.lastPrompt);
-	   return 	buildResponse (handlerInput, sessionAttributes.lastPrompt, sessionAttributes.lastReprompt, sessionAttributes.lastTitle, sessionAttributes.lastImage_url,  sessionAttributes.lastDisplayText, sessionAttributes.lastDisplay_type) 
+	   return 	buildResponse (handlerInput, sessionAttributes.lastPrompt, sessionAttributes.lastReprompt, sessionAttributes.lastTitle, sessionAttributes.lastImage_url,  sessionAttributes.lastDisplayText, sessionAttributes.lastDisplay_type)
 	}
-    
+
 
 
   },
@@ -494,7 +494,7 @@ const _randomQuestionIntro = handler => {
 
 let buildResponse = (handlerInput, prompt, reprompt, title = SKILL_NAME, image_url = BACKGROUND_IMAGE_URL,  displayText = prompt.replace(/(<([^>]+)>)/gi, ""), display_type = "BodyTemplate7" ) => {
   console.log(title);
-  	const sessionAttributes = handlerInput.attributesManager.getSessionAttributes(); 
+  	const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 	sessionAttributes.lastPrompt = prompt;
 	sessionAttributes.lastReprompt = reprompt;
 	sessionAttributes.lastTitle = title;
@@ -511,7 +511,7 @@ let buildResponse = (handlerInput, prompt, reprompt, title = SKILL_NAME, image_u
      response = getDisplay(handlerInput, title,  prompt, image_url, display_type).responseBuilder;
   } else {
      response = handlerInput.responseBuilder.speak(prompt)
-            
+
   }
   return response.withSimpleCard(title, displayText).getResponse();
 }
@@ -530,13 +530,13 @@ function getDisplay(handlerInput, title, displayText, image_url, display_type){
 	if (!image_url.includes('https://')) {
 		image_url=Util.getS3PreSignedUrl("Media/"+image_url);
 	}
-	
+
 
 	console.log("the display type is => " + display_type);
     console.log(image_url);
     var VISUAL_TOKEN = 'showthis';
             // Create Render Directive
-            
+
             handlerInput.responseBuilder.addDirective({
                 type: 'Alexa.Presentation.APL.RenderDocument',
                 datasources: {
@@ -577,8 +577,8 @@ function getDisplay(handlerInput, title, displayText, image_url, display_type){
                 token: VISUAL_TOKEN,
                 document: aplMainTemplate
             });
-            
-	
+
+
 	return handlerInput;
 }
 
