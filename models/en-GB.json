@@ -1,11 +1,18 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "personality assessment",
+      "invocationName": "Pancake Mood",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "Cancel",
+            "Not now",
+            "Cancel that step",
+            "Cancel that action",
+            "I want to cancel this",
+            "I'd like to cancel"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -17,11 +24,25 @@
         },
         {
           "name": "AMAZON.RepeatIntent",
-          "samples": []
+          "samples": [
+            "Could you repeat that",
+            "What did you say?",
+            "I didn't hear that",
+            "Say that again please",
+            "Sorry, I didn't catch that",
+            "Could you say that again please"
+          ]
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "Stop",
+            "Halt",
+            "Close",
+            "I want to stop",
+            "I'd like to quit",
+            "Could you stop"
+          ]
         },
         {
           "name": "AMAZON.YesIntent",
