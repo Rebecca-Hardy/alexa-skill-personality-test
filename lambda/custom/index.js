@@ -11,7 +11,7 @@ const SKILL_NAME = "Pancake Quiz";
 const HELP_MESSAGE_BEFORE_START = "Pancake Quiz can help you discover your pancake mood. I’ll pose 5 questions to you, you’ll consider the answers carefully before answering yes or no. If you don’t respond or are unsure, that’s okay, I’ll decide for you using my intuition. Let's start.";
 const HELP_MESSAGE_AFTER_START = "You’re currently taking the quiz to discover your pancake mood. I’ll ask questions and you’ll say yes or no, and if you’re unsure or don’t know, that’s okay, I can answer for you. Let me know if you need the question repeated. At the end I'll reveal your result.";
 const HELP_REPROMPT = "Once you answer yes or no to all questions, I'll reveal your pancake match.";
-const STOP_MESSAGE = "Your spirit animal will be waiting for you next time.";
+const STOP_MESSAGE = "Okay then, Hope to see you again soon to match you with your pancake mood.";
 const MISUNDERSTOOD_INSTRUCTIONS_ANSWER = "Sorry, I didn't get that, you need to answer with yes or no.";
 const HINT_TEXT = `To play again, just say "Alexa, open ${SKILL_NAME}"`
 
@@ -55,50 +55,50 @@ const PLAY_AGAIN_REQUEST = "That was it. Do you want to play again?";
 
 const resultList = {
   result1: {
-    name: "a red-knobbed starfish",
-    display_name: "Red-Knobbed Starfish",
-    audio_message: "Starfish are amazing and can regrow their own limbs.",
-    description: "Red-knobbed starfish are known for being the fashionistas of the salt water world. They always know how to look good in any circumstance. You might enjoy hanging around the edge of the pool and keeping an eye on everyone.",
+    name: "a Crepe Suzette",
+    display_name: "Crepe Suzette",
+    audio_message: "Crepes suvettes are warming with a real confident glow about them.",
+    description: "Even if they’re one of the thinnest pancakes, they’re large and confident. Crepe suzettes don’t doubt themselves and at this moment, neither do you – you're on fire! I implore you to use that confidence for good and empower others around you.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Red-knobbed.starfish.1200.jpg"
       //largeImageUrl: "result1.jpg",
     }
   },
   result2: {
-    name: "a rust mite",
-    display_name: "Rust Mite",
-    audio_message: "You are nearly invisible to the naked eye, but you aren't to be underestimated.",
-    description: "Dear old Aceria anthocoptes. Small but mighty, you love hanging around outdoors and have an unnatural affinity for thistles. Don't let anyone hold you back - while people don't notice you at first, you can have a big impact on the things around you.",
+    name: "a Japanese Souffle Pancake",
+    display_name: "Japanese Souffle Pancakes",
+    audio_message: "Souffle pancakes are for those who are walking on cloud 9.",
+    description: "You’ve got your head in the clouds and are feeling quite elated. The wonderful floaty texture of these pancakes make them so light you’ll need some toppings to weigh you down. However be careful with adding too much – don't get carried away.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Aceria_anthocoptes.1200.jpg"
       //largeImageUrl: "result2.jpg",
     }
   },
   result3: {
-    name: "a macaw",
-    display_name: "Hyacinth Macaw",
-    audio_message: "Macaws are smart and fabulous.",
-    description: "Your striking appearance is the talk of every party. You are always the most colorfully dressed one around. You're also one smart cookie - you were using tools to make your tasks easier before it was cool.",
+    name: "a Scotch Pancake",
+    display_name: "Scotch Pancakes",
+    audio_message: "Scotch Pancakes are quite underestimated, and just like you, they feel undervalued, but you know your real worth.",
+    description: "You’re feeling a little frustrated with your lot so why not take a friend like the scotch pancake and make them into a dish that’ll inspire. Your perspective can be immensely insightful for others and inspire novel approaches.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Anodorhynchus_hyacinthinus.1200.jpg"
       //largeImageUrl: "result3.jpg",
     }
   },
   result4: {
-    name: "a goat",
-    display_name: "Good Old Goat",
-    audio_message: "Baaa! You are a goat.",
-    description: "Goats are some of the most amazing animals on Earth. Constantly underestimated, they are nearly as impervious to other peoples' opinions as honey badgers. You are quite handy to have around, as you're always happy to take care of leftovers at any party.",
+    name: "a Crepe Cake",
+    display_name: "Crepe Cake",
+    audio_message: "Crepe cake is essentially a cake made of 1000s of crepe pancake layers, and so just like the cake, there’s a lot going on.",
+    description: "One of the special things about this crepe cake is that you get a new perspective on the variety of pancakes and how to use existing items in innovative, fun ways. You can use this as inspiration to solve your problems, especially when feeling overwhelmed.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Male_goat.1200.jpg"
       //largeImageUrl: "result4.jpg",
     }
   },
   result5: {
-    name: "a toad",
-    display_name: "Toad",
-    audio_message: "You dig relaxing and hanging around in the sunshine.",
-    description: "You are athletic and cool, the apple of everyone's eye. You really know how to take it easy and like to spend lots of time basking in the sun and enjoying the great outdoors. When you want to, you can be quite fast and nimble. You're always the first pick for team sports.",
+    name: "a Dosa",
+    display_name: "Dosas",
+    audio_message: "Dosa are excitable pancakes eagerly awaiting the an array of diverse flavours.",
+    description: "They fill their lives with tasty fillings, kinda like you, filling yourself with lovely knowledge and seeking new diverse experiences. You’re feeling brave and adventurous, so join the dosa on a new journey to learn and be curious.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Bufo_boreas.1200.jpg"
       //largeImageUrl: "result5.jpg",
@@ -107,8 +107,8 @@ const resultList = {
 };
 
 const questions = [{
-    question: "Do you like spending time socializing with others?",
-    questionDisplay: "Do you like spending time socializing?",
+    question: "Are you feeling bubbly now?",
+    questionDisplay: "Do you feel bubbly like champagne?",
     background:  "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q1.jpg",
     //background: "question1.jpg",
     points: {
@@ -120,8 +120,8 @@ const questions = [{
     }
   },
   {
-    question: "Do you enjoy sunbathing?",
-    questionDisplay: "Do you enjoy sunbathing?",
+    question: "Is your attitude a bit sour right now?",
+    questionDisplay: "is your attitude a bit sour, like sour milk?",
     background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q2.jpg",
     //background: "question2.jpg",
     points: {
@@ -133,8 +133,8 @@ const questions = [{
     }
   },
   {
-    question: "Do you enjoy reading a good book more than going out to a party?",
-    questionDisplay: "Do you enjoy a book more than a party?",
+    question: "If you were to dance right now, would you be light on your feet?",
+    questionDisplay: "Are you light on your feet dancing?",
     background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q3.jpg",
     //background: "question3.jpg",
     points: {
@@ -146,8 +146,8 @@ const questions = [{
     }
   },
   {
-    question: "Do you like doing sports?",
-    questionDisplay: "Do you like doing sports?",
+    question: "Do you feel like there are too many layers to your current problems?",
+    questionDisplay: "Do you feel overwhelmed by your current problems?",
     background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q4.jpg",
     //background: "question4.jpg",
     points: {
@@ -159,8 +159,8 @@ const questions = [{
     }
   },
   {
-    question: "Do you prefer vacationing in the forest instead of on the beach?",
-    questionDisplay: "A beach vs a forest. Forest? Yes or no?",
+    question: "Do you need a little bounce in your step?",
+    questionDisplay: "Do you need a little bounce in your step?",
     background: "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/q5.jpg",
     //background: "question5.jpg",
     points: {
