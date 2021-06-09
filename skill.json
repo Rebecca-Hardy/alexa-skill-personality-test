@@ -76,13 +76,13 @@
             ],
             "type": "ALEXA_PRESENTATION_APL"
           }
-        ]    
+        ]
       }
     },
     "manifestVersion": "1.0",
     "privacyAndCompliance": {
       "locales": {
-        "en-US": {}
+        "en-GB": {}
       }
     },
     "publishingInformation": {
@@ -93,16 +93,16 @@
       "distributionCountries": [],
       "isAvailableWorldwide": true,
       "locales": {
-        "en-US": {
+        "en-GB": {
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open personality quiz",
+            "Alexa open pancake quiz",
             "",
             ""
           ],
           "keywords": [],
-          "name": "Personality Assessment",
-          "summary": "personality quiz skill"
+          "name": "Pancake Quiz",
+          "summary": "pancake mood quiz skill"
         }
       },
       "testingInstructions": "Just a quiz skill. Test it, please!"
