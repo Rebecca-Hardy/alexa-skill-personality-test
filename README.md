@@ -2,8 +2,9 @@
 
 ## Description
 
-Ask Alexa to `Ask Personality Quiz` and start answering questions to determine your personality type.
+Ask Alexa to `Ask Pancake Quiz` and start answering questions to determine your pancake mood.
 
 ## Setup
 
-The skill is a part of the course "Voice User Interface Design in collaboration with Amazon Alexa". 
+The skill is a part of the course "Voice User Interface Design in collaboration with Amazon Alexa".
+s
