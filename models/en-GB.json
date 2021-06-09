@@ -20,7 +20,19 @@
         },
         {
           "name": "AMAZON.NoIntent",
-          "samples": []
+          "samples": [
+            "no",
+            "nope",
+            "definitely not",
+            "as it",
+            "nah",
+            "nu huh",
+            "I wouldn't say so",
+            "I don't think so",
+            "I wouldn't say yes",
+            "I think not",
+            "no way"
+          ]
         },
         {
           "name": "AMAZON.RepeatIntent",
@@ -46,7 +58,25 @@
         },
         {
           "name": "AMAZON.YesIntent",
-          "samples": []
+          "samples": [
+            "yes",
+            "yeah",
+            "yea",
+            "yup",
+            "yus",
+            "sure",
+            "right",
+            "affirmative",
+            "Roger that",
+            "For sure",
+            "Oh yes",
+            "Definitely",
+            "Hell yeah",
+            "Absolutely",
+            "Without a doubt yes",
+            "wholeheartedly yes",
+            "totally"
+          ]
         },
         {
           "name": "UndecisiveIntent",
