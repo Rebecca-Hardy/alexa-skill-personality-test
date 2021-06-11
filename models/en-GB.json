@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "Pancake Mood",
+      "invocationName": "pancake mood",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -38,10 +38,10 @@
           "name": "AMAZON.RepeatIntent",
           "samples": [
             "Could you repeat that",
-            "What did you say?",
+            "What did you say",
             "I didn't hear that",
             "Say that again please",
-            "Sorry, I didn't catch that",
+            "Sorry I didn't catch that",
             "Could you say that again please"
           ]
         },
