@@ -8,8 +8,8 @@ Data: Customize the data below as you please.
 
 
 const SKILL_NAME = "Pancake Quiz";
-const HELP_MESSAGE_BEFORE_START = "Pancake Quiz can help you discover your pancake mood. I’ll pose 5 questions to you, you’ll consider the answers carefully before answering yes or no. If you don’t respond or are unsure, that’s okay, I’ll decide for you using my intuition. Let's start.";
-const HELP_MESSAGE_AFTER_START = "You’re currently taking the quiz to discover your pancake mood. I’ll ask questions and you’ll say yes or no, and if you’re unsure or don’t know, that’s okay, I can answer for you. Let me know if you need the question repeated. At the end I'll reveal your result.";
+const HELP_MESSAGE_BEFORE_START = "Pancake Quiz can help you discover your pancake mood. I'll pose 5 questions to you, you'll consider the answers carefully before answering yes or no. If you don't respond or are unsure, that's okay, I'll decide for you using my intuition. Let's start.";
+const HELP_MESSAGE_AFTER_START = "You're currently taking the quiz to discover your pancake mood. I'll ask questions and you'll say yes or no, and if you're unsure or don't know, that's okay, I can answer for you. Let me know if you need the question repeated. At the end I'll reveal your result.";
 const HELP_REPROMPT = "Once you answer yes or no to all questions, I'll reveal your pancake match.";
 const STOP_MESSAGE = "Okay then, Hope to see you again soon to match you with your pancake mood.";
 const MISUNDERSTOOD_INSTRUCTIONS_ANSWER = "Sorry, I didn't get that, you need to answer with yes or no.";
@@ -23,7 +23,7 @@ const BACKGROUND_GOODBYE_IMAGE_URL = "https://s3.amazonaws.com/coach-courses-us/
 const BACKGROUND_HELP_IMAGE_URL = "https://s3.amazonaws.com/coach-courses-us/public/courses/voice/2.7/help.jpg";
 // const BACKGROUND_HELP_IMAGE_URL = "help.jpg";
 
-const WELCOME_MESSAGE = "Welcome! I can help you find out what type of pancake you are that matches your current mood. I’ll ask 5 questions and you’ll answer yes or no. Are you ready to start?";
+const WELCOME_MESSAGE = "Welcome! I can help you find out what type of pancake you are that matches your current mood. I'll ask 5 questions and you'll answer yes or no. Are you ready to start?";
 const INITIAL_QUESTION_INTROS = [
   "Splendid, Let's get started!",
   "<say-as interpret-as='interjection'>Alrighty</say-as>! Here comes your first question!",
@@ -58,7 +58,7 @@ const resultList = {
     name: "a Crepe Suzette",
     display_name: "Crepe Suzette",
     audio_message: "Crepes suvettes are warming with a real confident glow about them.",
-    description: "Even if they’re one of the thinnest pancakes, they’re large and confident. Crepe suzettes don’t doubt themselves and at this moment, neither do you – you're on fire! I implore you to use that confidence for good and empower others around you.",
+    description: "Even if they're one of the thinnest pancakes, they're large and confident. Crepe suzettes don't doubt themselves and at this moment, neither do you – you're on fire! I implore you to use that confidence for good and empower others around you.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Red-knobbed.starfish.1200.jpg"
       //largeImageUrl: "result1.jpg",
@@ -68,7 +68,7 @@ const resultList = {
     name: "a Japanese Souffle Pancake",
     display_name: "Japanese Souffle Pancakes",
     audio_message: "Souffle pancakes are for those who are walking on cloud 9.",
-    description: "You’ve got your head in the clouds and are feeling quite elated. The wonderful floaty texture of these pancakes make them so light you’ll need some toppings to weigh you down. However be careful with adding too much – don't get carried away.",
+    description: "You've got your head in the clouds and are feeling quite elated. The wonderful floaty texture of these pancakes make them so light you'll need some toppings to weigh you down. However be careful with adding too much – don't get carried away.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Aceria_anthocoptes.1200.jpg"
       //largeImageUrl: "result2.jpg",
@@ -78,7 +78,7 @@ const resultList = {
     name: "a Scotch Pancake",
     display_name: "Scotch Pancakes",
     audio_message: "Scotch Pancakes are quite underestimated, and just like you, they feel undervalued, but you know your real worth.",
-    description: "You’re feeling a little frustrated with your lot so why not take a friend like the scotch pancake and make them into a dish that’ll inspire. Your perspective can be immensely insightful for others and inspire novel approaches.",
+    description: "You're feeling a little frustrated with your lot so why not take a friend like the scotch pancake and make them into a dish that'll inspire. Your perspective can be immensely insightful for others and inspire novel approaches.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Anodorhynchus_hyacinthinus.1200.jpg"
       //largeImageUrl: "result3.jpg",
@@ -87,7 +87,7 @@ const resultList = {
   result4: {
     name: "a Crepe Cake",
     display_name: "Crepe Cake",
-    audio_message: "Crepe cake is essentially a cake made of 1000s of crepe pancake layers, and so just like the cake, there’s a lot going on.",
+    audio_message: "Crepe cake is essentially a cake made of 1000s of crepe pancake layers, and so just like the cake, there's a lot going on.",
     description: "One of the special things about this crepe cake is that you get a new perspective on the variety of pancakes and how to use existing items in innovative, fun ways. You can use this as inspiration to solve your problems, especially when feeling overwhelmed.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Male_goat.1200.jpg"
@@ -98,7 +98,7 @@ const resultList = {
     name: "a Dosa",
     display_name: "Dosas",
     audio_message: "Dosa are excitable pancakes eagerly awaiting the an array of diverse flavours.",
-    description: "They fill their lives with tasty fillings, kinda like you, filling yourself with lovely knowledge and seeking new diverse experiences. You’re feeling brave and adventurous, so join the dosa on a new journey to learn and be curious.",
+    description: "They fill their lives with tasty fillings, kinda like you, filling yourself with lovely knowledge and seeking new diverse experiences. You're feeling brave and adventurous, so join the dosa on a new journey to learn and be curious.",
     img: {
       largeImageUrl: "https://coach-courses-us.s3.amazonaws.com/public/courses/voice/Example%20images%20skill%203/Bufo_boreas.1200.jpg"
       //largeImageUrl: "result5.jpg",
